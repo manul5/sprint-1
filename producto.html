@@ -1,43 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--Debería ser dinámico el title-->
     <title>Producto</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <!--Poner mismo nav que en index-->
+      <img src="logo.png" alt="logo de la empresa" width="50" />
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
     </header>
     <main>
-        <article>
-            <img src="https://placehold.co/600x400?text=Imagen+del+producto" alt="Nombre del Producto">
+      <article>
+        <img
+          src="https://placehold.co/600x400?text=Imagen+del+producto"
+          alt="Nombre del Producto"
+        />
 
-            <section id="producto-informacion">
+        <section id="producto-informacion">
+          <h2 id="producto-nombre">Nombre del producto</h2>
+          <p id="producto-precio">$$$</p>
 
-                <h2 id="producto-nombre">Nombre del producto</h2>
-                <p id="producto-precio">$$$</p>
-            
-                <p id="producto-descripcion">Descripción - Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda eos aspernatur reprehenderit. Assumenda iste consequatur neque vitae hic.</p>
+          <p id="producto-descripcion">
+            Descripción - Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Assumenda eos aspernatur reprehenderit. Assumenda iste
+            consequatur neque vitae hic.
+          </p>
 
-                <h3>Detalles de Fabricación</h3>
-                <ul id="producto-detalles">
-                    <li><strong>Medidas:</strong> medidas</li>
-                    <li><strong>Materiales:</strong> materiales</li>
-                    <li><strong>Acabado:</strong> acabado</li>
-                    <li><strong>Peso:</strong> peso</li>
-                    <li><strong>Capacidad:</strong> capacidad</li>
-                </ul>
+          <h3>Detalles de Fabricación</h3>
+          <ul id="producto-detalles">
+            <li><strong>Medidas:</strong> medidas</li>
+            <li><strong>Materiales:</strong> materiales</li>
+            <li><strong>Acabado:</strong> acabado</li>
+            <li><strong>Peso:</strong> peso</li>
+            <li><strong>Capacidad:</strong> capacidad</li>
+          </ul>
 
-                <button id="btn-carrito">Añadir al Carrito</button>
-
-            </section>
-
-        </article>
+          <button id="btn-carrito">Añadir al Carrito</button>
+        </section>
+      </article>
     </main>
     <footer>
-        <!--Poner mismo footer que index-->
+        <p>&copy; Hermanos Jota. Todos los derechos reservados.</p>
+        <p>Direccion -Telefono - Mail</p> <!--Hay una etiqueta address, más semántica, ver que usamos-->
     </footer>
-</body>
+  </body>
 </html>
