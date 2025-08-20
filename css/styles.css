@@ -8,6 +8,13 @@
 
 
 
+body {
+  font-family: 'Inter', sans-serif;
+  background: #F5E6D3;
+  color: #333;
+  line-height: 1.6;
+}
+
 header {
   color: #333;
   font-family: 'Inter', sans-serif;
@@ -69,6 +76,11 @@ footer {
   margin-top: 3rem;
   color: #333;
   font-size: 0.9rem;
+
+  font-family: 'Inter', sans-serif;
+
+
+  line-height: 1.6;
   
 }
 .footer-container {
