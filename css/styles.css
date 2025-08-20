@@ -3,3 +3,144 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+/* HEADER */
+body {
+  font-family: 'Inter', sans-serif;
+  background: #F5E6D3;
+  color: #333;
+  line-height: 1.6;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: white;
+  border-bottom: 2px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+header .logo {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #A0522D;
+}
+header .logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+header .icono img {
+  height: 30px;
+  margin-right: 10px;
+}
+header nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+header nav a:hover {
+  color: #A0522D;
+}
+.cart-icon {
+  position: relative;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background: #A0522D;
+  color: white;
+  font-size: 0.8rem;
+  border-radius: 50%;
+  padding: 2px 6px;
+}
+
+/* FOOTER */
+footer {
+  background: #fff;
+  border-top: 2px solid #eee;
+  margin-top: 3rem;
+  color: #333;
+  font-size: 0.9rem;
+  
+}
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 2rem;
+  text-align: left;
+}
+.footer-col h4 {
+  color: #A0522D;
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+}
+.footer-logo {
+  text-align: center;
+}
+.footer-logo img {
+  margin-top: 2.5rem;
+  width: 130px;
+  margin-bottom: 0.5rem;
+}
+.footer-logo h3 {
+  color: #A0522D;
+  font-family: 'Inter', sans-serif;
+  margin-bottom: 0.3rem;
+}
+.footer-logo p {
+  color: #555;
+  font-size: 0.85rem;
+}
+.footer-horarios p,
+.footer-contact p,
+.footer-map p {
+  margin: 0.4rem 0;
+  display: flex;
+  align-items: center;
+}
+.footer-contact i,
+.footer-horarios i,
+.footer-map i {
+  margin-right: 8px;
+  color: #A0522D;
+}
+.footer-contact a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s;
+}
+.footer-contact a:hover {
+  color: #A0522D;
+}
+.footer-map iframe {
+  width: 80%;
+  height: 180px;
+  border: none;
+  border-radius: 8px;
+  margin-bottom: 0.8rem;
+}
+.footer-map .direccion {
+  font-size: 0.85rem;
+  color: #555;
+}
+.footer-bottom {
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+  background: #F5E6D3;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #A0522D;
+}
+
+
