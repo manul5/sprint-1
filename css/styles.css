@@ -5,13 +5,12 @@
 }
 
 /* HEADER */
-body {
-  font-family: 'Inter', sans-serif;
-  background: #F5E6D3;
-  color: #333;
-  line-height: 1.6;
-}
+
+
+
 header {
+  color: #333;
+  font-family: 'Inter', sans-serif;
   display: flex;
   justify-content: space-between;
   align-items: center;
