@@ -3,8 +3,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-/* HEADER */
 body {
   font-family: 'Inter', sans-serif;
   background: #F5E6D3;
@@ -12,6 +10,7 @@ body {
   line-height: 1.6;
 }
 
+/* HEADER */
 header {
   color: #333;
   font-family: 'Inter', sans-serif;
@@ -25,46 +24,22 @@ header {
   top: 0;
   z-index: 100;
 }
-main .banner{
+.icono {
   position: relative;
-  text-align: center;       /* centra el texto horizontalmente */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icono i {
+  font-size: 1.6rem;
   color: #A0522D;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.3s ease;
 }
-
-/* Imagen del banner */
-main .banner img {
-  width: 100%;              /*ancho */
-  max-height: 500px;        /*alto a tu gusto*/
-  object-fit: cover;        /* recorta la imagen sin deformarla */
-  display: block;
-  margin: 0 auto;           /* centra */
-  filter: brightness(60%); /*oscurece */
+.icono i:hover {
+  color: #87A96B;
+  transform: scale(1.1);
 }
-
-/* Texto dentro del banner */
-.banner h1 {
-  font-family: 'Playfair Display', serif; 
-  position: absolute;       /* encima de la imagen */
-  top: 50%;                 /* 50% desde arriba */
-  left: 50%;                /* 50% desde la izquierda */
-  transform: translate(-50%, -50%); /* lo centra exactamente */
-  color: #F5E6D3;           
-  font-size: 2.5rem;        /* tamaño*/
-  padding: 10px 20px;
-  border-radius: 8px;
-}
-
-.banner p {
-  position: absolute;
-  top: 65%;                 /* más abajo del título */
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #F5E6D3;
-  font-size: 1.2rem;
-  padding: 5px 15px;
-  border-radius: 6px;
-}
-
 header .logo {
   display: flex;
   align-items: center;
@@ -90,75 +65,6 @@ header nav a {
 header nav a:hover {
   color: #A0522D;
 }
-.cart-icon {
-  position: relative;
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-.cart-count {
-  position: absolute;
-  top: -8px;
-  right: -10px;
-  background: #A0522D;
-  color: white;
-  font-size: 0.8rem;
-  border-radius: 50%;
-  padding: 2px 6px;
-}
-
-<!--PRODUCTOS DESTACADOS-->
-.destacados {
-  background: #F5E6D3;
-  padding: 2rem;
-}
-.destacados h2 {
-  text-align: center;
-  margin-bottom: 1.5rem;
-  font-family: 'Playfair Display', serif;
-  color: #A0522D;
-}
-.destacados p{
-  text-align: center;
-  font-family: 'Inter', sans-serif;
-  color:#A0522D;
-
-}
-
-.carrusel {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  padding-bottom: 1rem;
-}
-.carrusel::-webkit-scrollbar {
-  display: none;
-}
-
-.carrusel .card {
-  flex: 0 0 250px;
-  scroll-snap-align: center;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  text-align: center;
-  padding: 1rem;
-}
-.carrusel .card img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin-bottom: 0.5rem;
-}
-.carrusel .card h3 {
-  font-size: 1rem;
-  margin: 0.5rem 0;
-}
-.carrusel .card p {
-  font-weight: bold;
-  color: #A0522D;
-}
 
 /* FOOTER */
 footer {
@@ -167,10 +73,7 @@ footer {
   margin-top: 3rem;
   color: #333;
   font-size: 0.9rem;
-
   font-family: 'Inter', sans-serif;
-
-
   line-height: 1.6;
   
 }
@@ -187,10 +90,13 @@ footer {
   font-size: 1rem;
 }
 .footer-logo {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .footer-logo img {
-  margin-top: 2.5rem;
+  /*margin-top: 2.5rem;*/
   width: 130px;
   margin-bottom: 0.5rem;
 }
