@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/index.css">
     <link
@@ -31,7 +31,7 @@
     </header>
     <main>
         <section class="banner">
-            <img src="assets/banner.png" alt="banner">
+            <img src="assets/banner.png" class="img" alt="banner">
             <h1>Muebleria Hermanos Jota</h1>
             <p>Cada pieza cuenta la historia de manos expertas y materiales nobles</p>
         </section>
@@ -39,8 +39,8 @@
             <h2>Productos Destacados</h2>
             <p>Descubre nuestra selección de muebles más populares, diseñados y fabricados con la máxima atención al
                 detalle.</p>
-            <div class="carrusel">
 
+            <div class="carrusel">
                 <!-- Producto 1 -->
                 <article class="card">
                     <div class="card-img">
@@ -48,7 +48,10 @@
                         <span class="tag">Destacado</span>
                     </div>
                     <h3>Aparador Uspallata</h3>
-                    <p>$150.000</p>
+                    <div class="card-footer">
+                        <p class="precio">$150.000</p>
+                        <a href="producto.html?id=aparador-uspallata" class="btn">Ver Detalles</a>
+                    </div>
                 </article>
 
                 <!-- Producto 2 -->
@@ -58,7 +61,10 @@
                         <span class="tag">Destacado</span>
                     </div>
                     <h3>Sofá Patagonia</h3>
-                    <p>$210.000</p>
+                    <div class="card-footer">
+                        <p class="precio">$210.000</p>
+                        <a href="producto.html?id=sofa-patagonia" class="btn">Ver Detalles</a>
+                    </div>
                 </article>
 
                 <!-- Producto 3 -->
@@ -68,7 +74,10 @@
                         <span class="tag">Destacado</span>
                     </div>
                     <h3>Sillón Copacabana</h3>
-                    <p>$185.000</p>
+                    <div class="card-footer">
+                        <p class="precio">$185.000</p>
+                        <a href="producto.html?id=sillon-copacabana" class="btn">Ver Detalles</a>
+                    </div>
                 </article>
 
                 <!-- Producto 4 -->
@@ -78,8 +87,12 @@
                         <span class="tag">Destacado</span>
                     </div>
                     <h3>Mesa de Centro Araucaria</h3>
-                    <p>$120.000</p>
+                    <div class="card-footer">
+                        <p class="precio">$120.000</p>
+                        <a href="producto.html?id=mesa-centro-araucaria" class="btn">Ver Detalles</a>
+                    </div>
                 </article>
+
             </div>
         </section>
     </main>
@@ -128,4 +141,5 @@
         </div>
     </footer>
 </body>
+
 </html>

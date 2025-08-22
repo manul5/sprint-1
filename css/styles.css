@@ -151,3 +151,57 @@ footer {
   color: #A0522D;
 }
 
+/* HEADER RESPONSIVO */
+@media (max-width: 480px) {
+  header {
+    position: sticky;
+    flex-wrap: wrap;
+    align-items: normal;
+    padding: 1rem;
+    position: relative;
+  }
+  
+  header .logo {
+    margin-bottom: 0.5rem;
+    font-size: 30px;
+    
+  }
+  
+  header nav {
+    display: flex;
+    font-size: 15px;
+    flex-direction: row;
+    width: 100%;
+    text-align: center;
+    margin-left: 0rem;
+  }
+  
+  header nav a {
+    margin: 0.3rem 0;
+    padding: 0.5rem;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .icono {
+    position: absolute;
+    right: 2.5rem;
+    top: 5.3rem;
+  }
+}
+
+/* FOOTER RESPONSIVO */
+@media (max-width: 480px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+  
+  .footer-map iframe {
+    width: 100%;
+  }
+  
+  .footer-logo {
+    text-align: center;
+  }
+}

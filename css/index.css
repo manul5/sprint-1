@@ -1,44 +1,149 @@
-main .banner{
+ .banner {
+   position: relative;
+   text-align: center;
+   /* centra el texto horizontalmente */
+   color: #A0522D;
+ }
+
+ /* Imagen del banner */
+ .img {
+   width: 100%;
+   /*ancho */
+   max-height: 500px;
+   /*alto a tu gusto*/
+   object-fit: cover;
+   /* recorta la imagen sin deformarla */
+   display: block;
+   margin: 0 auto;
+   /* centra */
+   filter: brightness(60%);
+   /*oscurece */
+ }
+
+ /* Texto dentro del banner */
+ .banner h1 {
+   font-family: 'Playfair Display', serif;
+   position: absolute;
+   /* encima de la imagen */
+   top: 50%;
+   /* 50% desde arriba */
+   left: 50%;
+   /* 50% desde la izquierda */
+   transform: translate(-50%, -50%);
+   /* lo centra exactamente */
+   color: #F5E6D3;
+   font-size: 2.5rem;
+   /* tamaño*/
+   padding: 10px 20px;
+   border-radius: 8px;
+ }
+
+ .banner p {
+   position: absolute;
+   top: 65%;
+   /* más abajo del título */
+   left: 50%;
+   transform: translate(-50%, -50%);
+   color: #F5E6D3;
+   font-size: 1.2rem;
+   padding: 5px 15px;
+   border-radius: 6px;
+ }
+
+ 
+
+ /* CARDS */
+.grid-productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+}
+.card-img {
   position: relative;
-  text-align: center;       /* centra el texto horizontalmente */
-  color: #A0522D;
 }
-
-/* Imagen del banner */
-main .banner img {
-  width: 100%;              /*ancho */
-  max-height: 500px;        /*alto a tu gusto*/
-  object-fit: cover;        /* recorta la imagen sin deformarla */
+.card-img img {
+  width: 100%;
   display: block;
-  margin: 0 auto;           /* centra */
-  filter: brightness(60%); /*oscurece */
 }
 
-/* Texto dentro del banner */
-.banner h1 {
-  font-family: 'Playfair Display', serif; 
-  position: absolute;       /* encima de la imagen */
-  top: 50%;                 /* 50% desde arriba */
-  left: 50%;                /* 50% desde la izquierda */
-  transform: translate(-50%, -50%); /* lo centra exactamente */
-  color: #F5E6D3;           
-  font-size: 2.5rem;        /* tamaño*/
-  padding: 10px 20px;
-  border-radius: 8px;
-}
-
-.banner p {
+/* ETIQUETAS DESATACADO */
+.tag {
   position: absolute;
-  top: 65%;                 /* más abajo del título */
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #F5E6D3;
-  font-size: 1.2rem;
-  padding: 5px 15px;
+  top: 10px;
+  left: 10px;
+  background: #9caf88;
+  color: white;
+  padding: 0.3rem 0.6rem;
   border-radius: 6px;
+  font-size: 0.8rem;
 }
 
-/* PRODUCTOS DESTACADOS */
+/* CONTENIDO CARDS */
+.card-body {
+  padding: 1rem;
+  text-align: left;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+.card-body h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+.card-footer{
+  margin-top: auto;
+}
+.card-footer .precio{
+  font-size: 1.2rem;
+  color: #A0522D;
+  margin-top: 0rem;
+  margin-bottom: 0.5rem;
+}
+.card-footer .btn{
+  display: inline-block;
+  background: #A0522D;
+  color: white;
+  padding: 0.5rem 0.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s;
+  align-self: flex-start;
+}
+.card-footer a{
+  font-size: 0.8rem;
+}
+.btn:hover {
+  background: #9CAF88;
+}
+.precio {
+  font-size: 1.2rem;
+  color: #A0522D;
+  margin: 0.5rem 0 1rem;
+}
+.categoria {
+  font-size: 0.9rem;
+  color: #87A96B;
+  font-weight: bold;
+}
+
+/* DESTACADOS*/
 .destacados {
   background: #F5E6D3;
   padding: 2rem;
@@ -49,13 +154,14 @@ main .banner img {
   font-family: 'Playfair Display', serif;
   color: #A0522D;
 }
+
 .destacados p{
   text-align: center;
-  font-family: 'Inter', sans-serif;
+  margin-bottom: 1.5rem;
+  font-family: Arial, Helvetica, sans-serif;
   color:#A0522D;
-
+  margin-bottom: 1.5rem;
 }
-
 .carrusel {
   display: flex;
   justify-content: center;
@@ -67,7 +173,6 @@ main .banner img {
 .carrusel::-webkit-scrollbar {
   display: none;
 }
-
 .carrusel .card {
   flex: 0 0 250px;
   scroll-snap-align: center;
@@ -90,4 +195,75 @@ main .banner img {
 .carrusel .card p {
   font-weight: bold;
   color: #A0522D;
+}
+
+/* BANNER RESPONSIVO */
+@media (max-width: 480px) {
+  .banner h1 {
+    font-size: 1.8rem;
+    width: 90%;
+    text-align: center;
+  }
+  
+  .banner p {
+    font-size: 1rem;
+    top: 70%;
+    width: 90%;
+    text-align: center;
+  }
+}
+
+/* PRODUCTOS DESTACADOS RESPONSIVOS */
+@media (max-width: 480px) {
+  .destacados {
+    padding: 1.5rem;
+  }
+  
+  .destacados h2 {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+  }
+  
+  .destacados > p {
+    margin: 1rem 0;
+  }
+  
+  .carrusel {
+    gap: 0.8rem;
+    justify-content: flex-start;
+  }
+  
+  .carrusel .card {
+    flex: 0 0 200px;
+    padding: 0.8rem;
+  }
+}
+
+/* Para pantallas muy pequeñas (menos de 420px) */
+@media (max-width: 480px) {
+  .banner h1 {
+    font-size: 1.5rem;
+    top: 45%;
+  }
+  
+  .banner p {
+    font-size: 0.9rem;
+    top: 65%;
+  }
+  
+  .destacados {
+    padding: 1rem;
+  }
+  
+  .destacados h2 {
+    font-size: 1.3rem;
+  }
+  
+  .carrusel .card {
+    flex: 0 0 180px;
+  }
+  
+  .carrusel .card h3 {
+    font-size: 0.9rem;
+  }
 }
