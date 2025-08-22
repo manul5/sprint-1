@@ -12,17 +12,17 @@ body {
 
 /* HEADER */
 header {
-  color: #333;
+  color: #333; 
   font-family: 'Inter', sans-serif;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  background: white;
-  border-bottom: 2px solid #eee;
-  position: sticky;
-  top: 0;
-  z-index: 100;
+  display: flex; 
+    flex-wrap: wrap; 
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 1rem; 
+  background: white; 
+  position: sticky; 
+  top: 0; 
+  z-index: 100; 
 }
 .icono {
   position: relative;
@@ -30,36 +30,37 @@ header {
   align-items: center;
   justify-content: center;
 }
-.icono i {
-  font-size: 1.6rem;
-  color: #A0522D;
-  cursor: pointer;
-  transition: transform 0.2s ease, color 0.3s ease;
-}
-.icono i:hover {
-  color: #87A96B;
-  transform: scale(1.1);
-}
 header .logo {
-  display: flex;
+  display: flex; 
   align-items: center;
-  font-weight: bold;
-  font-size: 1.2rem;
-  color: #A0522D;
+  gap: 0.5rem;
 }
 header .logo img {
-  height: 40px;
-  margin-right: 10px;
+  height: 36px;
 }
+header .logo span {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+}
+
 header .icono img {
-  height: 30px;
-  margin-right: 10px;
+  width: 28px;
+}
+header nav {
+  display: none; 
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 200px;
 }
 header nav a {
-  margin: 0 1rem;
   text-decoration: none;
   color: #333;
   font-weight: 500;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
   transition: color 0.3s;
 }
 header nav a:hover {
@@ -69,58 +70,30 @@ header nav a:hover {
 /* FOOTER */
 footer {
   background: #fff;
-  border-top: 2px solid #eee;
-  margin-top: 3rem;
   color: #333;
   font-size: 0.9rem;
-  font-family: 'Inter', sans-serif;
-  line-height: 1.6;
-  
 }
 .footer-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  padding: 2rem;
-  text-align: left;
-}
-.footer-col h4 {
-  color: #A0522D;
-  margin-bottom: 0.8rem;
-  font-size: 1rem;
-}
-.footer-logo {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  gap: 2rem;
+  padding: 2rem 1rem;
+}
+.footer-col h4, .footer-col h4 {
+  color: #A0522D;
+  margin-bottom: 0.5rem;
+  font-family: 'Playfair Display', serif;
+}
+.footer-logo {
+  text-align: center;
 }
 .footer-logo img {
-  /*margin-top: 2.5rem;*/
-  width: 130px;
+  width: 90px;
   margin-bottom: 0.5rem;
-}
-.footer-logo h3 {
-  color: #A0522D;
-  font-family: 'Inter', sans-serif;
-  margin-bottom: 0.3rem;
 }
 .footer-logo p {
   color: #555;
   font-size: 0.85rem;
-}
-.footer-horarios p,
-.footer-contact p,
-.footer-map p {
-  margin: 0.4rem 0;
-  display: flex;
-  align-items: center;
-}
-.footer-contact i,
-.footer-horarios i,
-.footer-map i {
-  margin-right: 8px;
-  color: #A0522D;
 }
 .footer-contact a {
   text-decoration: none;
@@ -131,77 +104,44 @@ footer {
   color: #A0522D;
 }
 .footer-map iframe {
-  width: 80%;
+  width: 100%;
   height: 180px;
   border: none;
   border-radius: 8px;
   margin-bottom: 0.8rem;
 }
-.footer-map .direccion {
-  font-size: 0.85rem;
-  color: #555;
-}
 .footer-bottom {
-  width: 100%;
   text-align: center;
   padding: 1rem;
   background: #F5E6D3;
   font-size: 0.8rem;
   font-weight: bold;
+  border-top: 1px solid rgba(255,255,255,0.3);
   color: #A0522D;
 }
 
-/* HEADER RESPONSIVO */
-@media (max-width: 480px) {
-  header {
-    position: sticky;
-    flex-wrap: wrap;
-    align-items: normal;
-    padding: 1rem;
-    position: relative;
-  }
-  
-  header .logo {
-    margin-bottom: 0.5rem;
-    font-size: 30px;
-    
-  }
-  
+@media (min-width: 768px) {
   header nav {
     display: flex;
-    font-size: 15px;
+    position: static;
     flex-direction: row;
-    width: 100%;
-    text-align: center;
-    margin-left: 0rem;
+    background: transparent;
+    width: auto;
   }
-  
   header nav a {
-    margin: 0.3rem 0;
-    padding: 0.5rem;
-    border-bottom: 1px solid #eee;
+    border: none;
+    margin: 0 1rem;
   }
-  
-  .icono {
-    position: absolute;
-    right: 2.5rem;
-    top: 5.3rem;
+  header nav a:hover {
+    background: transparent;
+    color: #A0522D;
   }
-}
 
-/* FOOTER RESPONSIVO */
-@media (max-width: 480px) {
   .footer-container {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-    padding: 1.5rem;
+    flex-direction: row;
+    justify-content: space-between;
   }
-  
-  .footer-map iframe {
-    width: 100%;
-  }
-  
-  .footer-logo {
-    text-align: center;
+  .footer-col {
+    flex: 1;
   }
 }
