@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+article {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.producto-imagen {
+    flex: 1;
+    min-width: 10px;
+    max-width: 40%;
+    height: auto;
+    object-fit: cover;
+}
+.producto-categoria {
+    display: inline-block;
+    background: #C47A6Df5;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: white;
+}
+
+.producto-nombre {
+    font-size: 2.2rem;
+    color: #A0522D;
+    margin: 0.5rem 0;
+}
+
+.producto-precio {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #A0522D;
+    margin-bottom: 0.5rem;
+}
+
+.producto-descripcion {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+.producto-especificaciones {
+    padding: 0rem;
+    border-left: 4px solid #A0522D;
+
+}
+.producto-especificaciones h3{
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
+.producto-especificaciones ul {
+    list-style: none;
+    padding: 0;
+    margin-left: 1rem;
+}
+
+
+.producto-especificaciones li {
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.producto-especificaciones li:before {
+    content: "•";
+    color: #A0522D;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+#btn-carrito {
+    background: #A0522D;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-weight: 500;
+    margin-top: 1rem;
+}
+
+#btn-carrito:hover {
+    background: #492514;
+}
+
+/*PRODUCTO RESPONSIVIDAD*/
+@media (max-width)
