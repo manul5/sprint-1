@@ -7,7 +7,7 @@
 
 .banner img {
   width: 100%;
-  max-height: 80vh; /* ocupa hasta el 80% de la pantalla */
+  max-height: 80vh; 
   object-fit: cover;
   display: block;
   filter: brightness(60%);
@@ -39,7 +39,7 @@
   text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
 }
 
-/* ========== CARDS / GRID ========== */
+/* CARDS / GRID */
 .grid-productos {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -128,7 +128,7 @@
   font-weight: bold;
 }
 
-/* ========== DESTACADOS ========== */
+/*  DESTACADOS  */
 .destacados {
   background: #F5E6D3;
   padding: 2rem 1rem;
@@ -185,7 +185,7 @@
   color: #A0522D;
 }
 
-/* ========== RESPONSIVE DESIGN ========== */
+/* Responsividad*/
 @media (max-width: 1024px) {
   .grid-productos {
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
