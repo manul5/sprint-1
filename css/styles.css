@@ -15,7 +15,7 @@ header {
   color: #333; 
   font-family: 'Inter', sans-serif;
   display: flex; 
-    flex-wrap: wrap; 
+  flex-wrap: wrap; 
   justify-content: space-between; 
   align-items: center; 
   padding: 1rem; 
@@ -29,11 +29,15 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  order: 3;
 }
 header .logo {
   display: flex; 
   align-items: center;
   gap: 0.5rem;
+  order: 2; 
+  flex: 1; 
+  justify-content: center;
 }
 header .logo img {
   height: 36px;
@@ -53,18 +57,44 @@ header nav {
   flex-direction: column;
   position: absolute;
   top: 100%;
-  right: 0;
-  width: 200px;
+  /*right: 1rem;*/
+  width: 220px;
+  background: white;
+  padding: 0.5rem 0;
+  border-radius: 12px;
+  order: 4;
+  left: 0;
 }
+
+header nav.active {
+  display: flex;
+}
+
 header nav a {
   text-decoration: none;
   color: #333;
   font-weight: 500;
   border-bottom: 1px solid rgba(255,255,255,0.2);
   transition: color 0.3s;
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid #eee;
 }
+
 header nav a:hover {
   color: #A0522D;
+}
+
+header nav a:last-child {
+  border-bottom: none; /*para sacar la línea del último*/
+}
+
+.menu-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #333;
+  order:1;
 }
 
 /* FOOTER */
@@ -135,6 +165,34 @@ footer {
   header nav a:hover {
     background: transparent;
     color: #A0522D;
+  }
+  .menu-toggle {
+    display: none; 
+  }
+  
+  header .logo {
+    order: 1;
+    flex: 0;
+    justify-content: flex-start;
+  }
+  nav {
+    order: 2;
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    background: transparent;
+    box-shadow: none;
+    width: auto;
+  }
+
+  nav a {
+    border: none;
+    margin: 0 1rem;
+  }
+
+  .icono {
+    order: 3;
+    margin-left: auto; 
   }
 
   .footer-container {
