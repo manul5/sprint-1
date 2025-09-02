@@ -13,6 +13,10 @@ article {
   margin: 0 auto;
 }
 
+article.oculto {
+  display: none;
+}
+
 .producto-imagen {
   width: 100%;
   border-radius: 10px;
