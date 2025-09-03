@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (!contenedorCarrusel) return;
 
-  const destacados = productos.slice(0, 4);
+  const destacados = productos.filter(prod => prod.destacado === true);
 
   destacados.forEach((prod) => {
     const card = document.createElement("article");

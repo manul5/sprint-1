@@ -12,7 +12,8 @@ export const productos = [
             { titulo: "Acabado", valor: "Aceite natural ecológico" },
             { titulo: "Peso", valor: "68 kg" },
             { titulo: "Capacidad", valor: "6 compartimentos interiores" }
-        ]
+        ],
+        destacado: false
     },
     {
         id: 2,
@@ -27,7 +28,8 @@ export const productos = [
             { titulo: "Acabado", valor: "Laca mate ecológica" },
             { titulo: "Capacidad", valor: "45 kg por estante" },
             { titulo: "Modulares", valor: "5 estantes ajustables" }
-        ]
+        ],
+        destacado: true
     },
     {
         id: 3,
@@ -42,7 +44,8 @@ export const productos = [
             { titulo: "Acabado", valor: "Cera vegetal, tapizado premium" },
             { titulo: "Tapizado", valor: "Repelente al agua y manchas" },
             { titulo: "Confort", valor: "Espuma alta densidad" }
-        ]
+        ],
+        destacado: false
     },
     {
         id: 4,
@@ -57,7 +60,8 @@ export const productos = [
             { titulo: "Acabado", valor: "Cuero anilina premium" },
             { titulo: "Rotación", valor: "360° silenciosa y suave" },
             { titulo: "Garantía", valor: "10 años en estructura" }
-        ]
+        ],
+        destacado: true
     },
     {
         id: 5,
@@ -72,7 +76,8 @@ export const productos = [
             { titulo: "Acabado", valor: "Mármol pulido, aceite natural en madera" },
             { titulo: "Peso", valor: "42 kg" },
             { titulo: "Carga máxima", valor: "25 kg distribuidos" }
-        ]
+        ],
+        destacado: false
     },
     {
         id: 6,
@@ -87,7 +92,8 @@ export const productos = [
             { titulo: "Acabado", valor: "Barniz mate de poliuretano" },
             { titulo: "Almacenamiento", valor: "1 cajón + repisa inferior" },
             { titulo: "Características", valor: "Cajón con cierre suave" }
-        ]
+        ],
+        destacado: true
     },
     {
         id: 7,
@@ -102,7 +108,8 @@ export const productos = [
             { titulo: "Acabado", valor: "Aceite natural, tapizado premium" },
             { titulo: "Colchón", valor: "Compatible con colchón 160×200" },
             { titulo: "Características", valor: "Cabecero flotante acolchado" }
-        ]
+        ],
+        destacado: false
     },
     {
         id: 8,
@@ -117,7 +124,8 @@ export const productos = [
             { titulo: "Tapizado", valor: "Lino 100% natural premium" },
             { titulo: "Relleno", valor: "Espuma HR + plumón reciclado" },
             { titulo: "Sostenibilidad", valor: "Materiales 100% reciclables" }
-        ]
+        ],
+        destacado: true
     },
     {
         id: 9,
@@ -132,7 +140,8 @@ export const productos = [
             { titulo: "Acabado", valor: "Aceite-cera natural" },
             { titulo: "Capacidad", valor: "6-10 comensales" },
             { titulo: "Extensión", valor: "Sistema de mariposa central" }
-        ]
+        ],
+        destacado: false
     },
     {
         id: 10,
@@ -147,7 +156,8 @@ export const productos = [
             { titulo: "Acabado", valor: "Laca mate, pintura epoxi" },
             { titulo: "Apilables", valor: "Hasta 6 sillas" },
             { titulo: "Incluye", valor: "Set de 4 sillas" }
-        ]
+        ],
+        destacado: true
     },
     {
         id: 11,
@@ -162,7 +172,8 @@ export const productos = [
             { titulo: "Acabado", valor: "Laca mate resistente" },
             { titulo: "Almacenamiento", valor: "1 cajón con organizador" },
             { titulo: "Cables", valor: "Pasacables integrado" }
-        ]
+        ],
+        destacado: false
     },
     {
         id: 12,
@@ -177,6 +188,7 @@ export const productos = [
             { titulo: "Acabado", valor: "Base cromada, tapizado premium" },
             { titulo: "Regulación", valor: "Altura + inclinación respaldo" },
             { titulo: "Certificación", valor: "Ergonomía europea EN 1335" }
-        ]
+        ],
+        destacado: false
     }
 ]
