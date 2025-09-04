@@ -157,14 +157,14 @@ em {
 }
 
 @media (max-width: 768px) {
-    .seccion {
+    #seccion {
         flex-direction: column;
         gap: 2rem;
         align-items: stretch;
     }
 
 
-    form {
+    #form-contacto {
         margin-top: 0;
     }
 }
