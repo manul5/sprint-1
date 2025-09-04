@@ -12,8 +12,10 @@ function renderProductos() {
                 <span class="categoria">${producto.categoria}</span>
                 <h3>${producto.nombre}</h3>
                 <p>${producto.descripcion}</p>
-                <p class="precio">$${producto.precio.toLocaleString()}</p>
-                <a href="producto.html?id=${producto.id}" class="btn">Ver Detalles</a>
+                <div class="card-footer">
+                    <p class="precio">$${producto.precio.toLocaleString()}</p>
+                    <a href="producto.html?id=${producto.id}" class="btn">Ver Detalles</a>
+                </div>
             </div>
         </article>
     `).join('');
