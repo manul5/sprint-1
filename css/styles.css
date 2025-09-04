@@ -29,7 +29,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  order: 3;
+  order: 5;
 }
 header .logo {
   display: flex; 
@@ -61,7 +61,7 @@ header nav {
   background: white;
   padding: 0.5rem 0;
   border-radius: 12px;
-  order: 4;
+  order: 3;
   left: 0;
 }
 
@@ -95,7 +95,43 @@ header nav a:last-child {
   color: #333;
   order:1;
 }
-
+.buscador {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  order: 3; 
+  margin-right: 10px;
+}
+.buscador input {
+  padding: 8px 15px;
+  border: 1px solid #ddd;
+  border-radius: 24px;
+  outline: none;
+  transition: all 0.3s ease;
+  width: 40px;
+  opacity: 0;
+  pointer-events: none;
+ }
+.buscador.active input {
+  width: 200px;
+  opacity: 1;
+ pointer-events: all;
+ }
+.buscador button {
+  background: #A0522D;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  color: white;
+  font-size: 14px;
+  border-radius: 50%;
+  cursor: pointer;  
+  border: 0;
+  position: absolute;
+  right: 0;
+ }
 /* FOOTER */
 footer {
   background: #fff;
@@ -159,7 +195,16 @@ footer {
   }
   
   .menu-toggle {
-    display: none;
+   display: none;
+  }
+  .buscador {
+   margin-right: 0;
+  }
+            
+ .buscador input {
+   width: 200px;
+   opacity: 1;
+   pointer-events: all;
   }
   
   header .logo {
