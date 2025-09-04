@@ -19,14 +19,14 @@ function mostrarContador() {
     contadorBadge = document.createElement('span');
     contadorBadge.classList.add('contador-carrito');
     contadorBadge.style.cssText = `
-      background:red;
+      background:#A0522D;
       color:white;
       border-radius:50%;
       padding:4px 8px;
       position:absolute;
-      top:5px;
-      right:5px;
-      font-size:12px;
+      bottom:15px;
+      right:-8px;
+      font-size:8px;
     `;
     carritoIcon.style.position = 'relative';
     carritoIcon.appendChild(contadorBadge);
