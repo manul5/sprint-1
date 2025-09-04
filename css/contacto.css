@@ -2,7 +2,7 @@ body {
     background: white;
 }
 
-.contacto1 {
+#contacto1 {
     background-color: #F5E6D3;
     display: flex;
     flex-direction: column;
@@ -25,7 +25,7 @@ body {
     font-size: large;
 } */
 
-.contacto2 {
+#contacto2 {
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -35,30 +35,30 @@ body {
     background-color: white;
 }
 
-.seccion {
+#seccion {
     display: flex;
     flex-direction: row;
     gap: 2rem;
     align-items: center; /* Asegura que los hijos tengan la misma altura */
 }
 
-.seccion > * {
+#seccion > * {
     flex: 1;
 }
 
-.info {
+#info {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: x-large;
     font-weight: 700;
 }
 
-.container {
+#container {
     display: flex;
     flex-direction: column;
     gap: 2rem;
 }
 
-.item {
+#item {
     display: flex;
     flex-direction: row;
     gap: 2rem;
@@ -72,19 +72,19 @@ body {
     padding: 10px;
 }
 
-.texto {
+#texto {
     gap: 2rem;
 }
 
-.texto-titulo {
+#texto-titulo {
     font-weight: 600;
 }
 
-.info2 {
+#info2 {
     font-size: medium;
 }
 
-form {
+#form-contacto {
     padding: 2rem; 
     background-color: #F5E6D3;
     margin: 5rem;
@@ -110,7 +110,7 @@ label {
 }
 
 
-input, textarea {
+.inp-form-contacto, textarea {
     width: 100%;
     padding: 10px 14px;
     border: 1px solid #d1d5db;
@@ -132,7 +132,7 @@ input:focus, textarea:focus {
     box-shadow: 0 0 0 3px rgba(135, 169, 107, 0.15);
 }
 
-button {
+#btn-enviar {
     background-color: #87A96B;
     border: none;
     padding: 10px;
@@ -144,7 +144,7 @@ button {
     color: white;
 }
 
-button:hover {
+#btn-enviar:hover {
     
     cursor: pointer;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
