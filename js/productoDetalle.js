@@ -41,6 +41,11 @@ const cargarProducto = async () => {
 
         document.title = producto.nombre;
 
+        const breadcrumbProducto = document.getElementById("breadcrumb-producto");
+        if (breadcrumbProducto) {
+          breadcrumbProducto.textContent = producto.nombre;
+        }
+
         article.classList.remove('oculto');
 
     } else {
