@@ -1,53 +1,71 @@
-.banner {
+/* HERO FULLSCREEN */
+.hero-full {
   position: relative;
-  text-align: center;
-  color: #A0522D;
+  width: 100%;
+  height: 100vh;
   overflow: hidden;
 }
 
-.banner img {
+.hero-full img {
   width: 100%;
-  max-height: 50vh; 
+  height: 100%;
   object-fit: cover;
-  display: block;
   filter: brightness(60%);
 }
 
-/* Texto en el banner */
-
-.banner-text {
-  font-family: 'Playfair Display', serif;
+.hero-overlay {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #F5E6D3;
-  padding: 0.3rem 1rem;
   text-align: center;
-  max-width: 90%;
-  box-sizing: border-box;
-  word-break: break-word;
-}
-.banner-text h1 {
-  font-size: 1.2rem; 
-  margin-bottom: 0.5rem;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
-}
-.banner-text p {
-  font-size: 0.9rem;
-  margin-bottom: 0.5rem;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+  color: #F5E6D3;
+  max-width: 800px;
+  padding: 2rem;
 }
 
-/* CARDS / GRID */
-.grid-productos {
-  display: grid;
-  grid-template-columns: 1fr;
+.hero-overlay h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.hero-overlay p {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  margin-bottom: 2rem;
+  color: rgba(245, 230, 211, 0.9);
+}
+
+.hero-overlay .btn {
+  background: #A0522D;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+.hero-overlay .btn:hover {
+  background: #9CAF88;
+}
+
+/* SUBTITULOS GENERALES */
+section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  color: #A0522D;
+  margin-bottom: 2rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 1rem;
-  margin-top: 2rem;
-  padding: 0;
 }
 
+/* CARDS GENERALES */
 .card {
   background: white;
   border-radius: 12px;
@@ -57,7 +75,6 @@
   display: flex;
   flex-direction: column;
 }
-
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 12px rgba(0,0,0,0.15);
@@ -68,12 +85,12 @@
 }
 .card-img img {
   width: 100%;
-  height: 100px;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
   display: block;
 }
 
-/* Etiquetas destacado */
+/* ETIQUETAS DESTACADOS */
 .tag {
   position: absolute;
   top: 1px;
@@ -85,7 +102,7 @@
   font-size: 0.8rem;
 }
 
-/* Contenido de las cards */
+/* CONTENIDO CARDS */
 .card-body {
   padding: 1rem;
   text-align: left;
@@ -98,7 +115,6 @@
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
 }
-
 .card-footer {
   margin-top: auto;
 }
@@ -120,30 +136,28 @@
 .card-footer .btn:hover {
   background: #9CAF88;
 }
-
-/* Categoria */
 .categoria {
   font-size: 0.9rem;
   color: #87A96B;
   font-weight: bold;
 }
 
-/*  DESTACADOS  */
+/* DESTACADOS */
 .destacados {
   background: #F5E6D3;
-  padding: 0.7rem 0.2rem;
+  padding: 1.5rem 0.5rem;
 }
 .destacados h2 {
   text-align: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   font-family: 'Playfair Display', serif;
   color: #A0522D;
 }
-.destacados p{
-  color: #000000;
+.destacados p {
+  color: #333;
   text-align: center;
   margin-bottom: 1.5rem;
-  font-family: 'Playfair Display';
+  font-family: 'Inter', sans-serif;
 }
 .carrusel-wrapper {
   position: relative;
@@ -164,17 +178,17 @@
   display: none;
 }
 .carrusel .card {
-  flex: 0 0 150px;
+  flex: 0 0 180px;
   scroll-snap-align: start;
   background: #fff;
   border-radius: 12px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   text-align: center;
-  padding: 0.4rem;
+  padding: 0.6rem;
 }
 .carrusel .card img {
   width: 100%;
-  aspect-ratio: 4 / 3;  /* Mantiene proporción sin altura fija */
+  aspect-ratio: 4 / 3;
   object-fit: cover;
   border-radius: 8px;
   margin-bottom: 0.5rem;
@@ -187,7 +201,6 @@
   font-weight: bold;
   color: #A0522D;
 }
-
 .carrusel-btn {
   position: absolute;
   top: 50%;
@@ -201,65 +214,62 @@
   z-index: 2;
   font-size: 1rem;
 }
+.carrusel-btn.left { left: 0.5rem; }
+.carrusel-btn.right { right: 0.5rem; }
+.carrusel-btn:hover { background: #9CAF88; }
 
-.carrusel-btn.left {
-  left: 0.5rem;
+/* POR QUÉ NOSOTROS */
+.porque {
+  background-color: #F5E6D3;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+.porque .intro {
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  color: #555;
+  font-size: 1rem;
+}
+.porque-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 2rem 0;
+}
+.porque-item {
+  padding: 0 1rem;
+  border-right: 2px solid #A0522D;
+}
+.porque-item:last-child {
+  border-right: none;
+}
+.porque-item h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  color: #A0522D;
+  margin-bottom: 0.5rem;
+}
+.porque-item p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  color: #555;
 }
 
-.carrusel-btn.right {
-  right: 0.5rem;
+/* ------------------- */
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .carrusel .card { flex: 0 0 160px; }
+  .porque-item {
+    border-right: none;
+    border-bottom: 2px solid #A0522D;
+    padding-bottom: 1rem;
+  }
+  .porque-item:last-child { border-bottom: none; }
 }
 
-.carrusel-btn:hover {
-  background: #9CAF88;
+@media (max-width: 480px) {
+  .hero-overlay h1 { font-size: 1.5rem; }
+  .hero-overlay p { font-size: 1rem; }
+  .carrusel .card { flex: 0 0 140px; }
 }
 
-
-/* Responsividad*/
-@media (min-width: 768px) {
-  .grid-productos {
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    padding: 0.5rem;
-  }
-  .card-img img {
-    height: 140px;
-  }
-  .destacados {
-    padding: 1.2rem 0.5rem;
-  }
-  .carrusel .card {
-    flex: 0 0 200px;
-    padding: 0.7rem;
-  }
-  .carrusel .card img {
-    aspect-ratio: 4 / 3;
-    max-height: 150px;
-  }
-  .banner-text h1 {
-    font-size: clamp(2rem, 5vw, 2.5rem);
-  }
-  .banner-text p {
-    font-size: clamp(1rem, 3vw, 1.5rem);
-  }
-}
-
-@media (min-width: 1024px) {
-  .grid-productos {
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 1.5rem;
-    padding: 0 1rem;
-  }
-  .card-img img {
-    height: 200px;
-  }
-  .destacados {
-    padding: 2rem;
-  }
-  .carrusel .card {
-    flex: 0 0 250px;
-    padding: 1rem;
-  }
-  .carrusel .card img {
-    height: auto;
-  }
-}
