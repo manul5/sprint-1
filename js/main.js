@@ -6,6 +6,8 @@ toggle.addEventListener("click", () => {
 });
 
 const buscador = document.getElementById('buscador');
+
+if (buscador) {
   const boton = document.getElementById('btn-buscar');
   const input = buscador.querySelector('input');
 
@@ -25,3 +27,4 @@ const buscador = document.getElementById('buscador');
       buscador.classList.remove('active');
     }
   });
+}
